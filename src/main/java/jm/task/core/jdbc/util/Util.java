@@ -6,10 +6,11 @@ import java.sql.SQLException;
 
 public class Util {
     // реализуйте настройку соеденения с БД
-    public static void connectToMysql (String url, String userName, String password) throws ClassNotFoundException, SQLException {
+
+
+
+    public static Connection getConnection (String url, String userName, String password) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        try (Connection connection = DriverManager.getConnection (url, userName, password)){
-            System.out.println("We're connected");
-        }
+        return DriverManager.getConnection (url, userName, password);
     }
 }
