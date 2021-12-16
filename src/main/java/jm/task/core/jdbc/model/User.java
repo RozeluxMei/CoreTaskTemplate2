@@ -59,4 +59,8 @@ public class User {
     public void setAge(Byte age) {
         this.age = age;
     }
+
+    public String toString (){
+        return String.format("Name: %s, Last Name: %s, Age: %d", name, lastName, age);
+    }
 }
